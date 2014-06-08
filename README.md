@@ -2,7 +2,7 @@
 
 ## Status
 
-I’m actively updating this at the moment. Keyword and commenting highlighting are all that works at the moment.
+I’m actively updating this now. Keyword, comment, and string highlighting are all that work at the moment.
 
 ## Installation
 

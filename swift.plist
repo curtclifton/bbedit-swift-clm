@@ -123,6 +123,16 @@
 		  			 )*? 
 		  		 \*/)
 		)]]></string>
+		<key>String Pattern</key>
+		<string><![CDATA[(?x:
+			(?>	"	(
+						[^"\r\\]	(?# match anything potential ending quote, new line, or start of escape sequence)
+					|	\\.			(?# match any escape sequence pair)
+					)*?
+				"
+			)
+		)]]></string>
+
 	</dict>
 </dict>
 </plist>
