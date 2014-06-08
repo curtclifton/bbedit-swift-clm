@@ -113,8 +113,15 @@
 		<string>0-9A-Za-z_¨ª­¯²-µ·-º¼-¾À-ÖØ-öø-ÿĀ-˿Ͱ-ᙿᚁ-᠍᠏-ᶿḀ-῿​-‍‪-‮‿-⁀⁔⁠-⁯⁰-⃏℀-↏①-⓿❶-➓Ⰰ-ⷿ⺀-⿿〄-〇〡-〯〱-〿぀-퟿豈-ﴽ﵀-﷏ﷰ-︟︰-﹄﹇-�̀-ͯ᷀-᷿⃐-⃿︠-︯</string>
 		<key>Comment Pattern</key>
 		<string><![CDATA[(?x:
-			(?>  //  [^\r]*    \r)    (?# single line comment)
-		  | (?>  /\* (.|\r)*?  \*/)   (?# multiline comment)
+			(?>  //  [^\r]*              \r)    (?# single line comment)
+		  | (?>  /\* (                          (?# multiline comment)
+		  					[^/*] 
+		  			  	|	/(?=[^*])	(?# a "/" not followed by "*")
+		  			  	|	\*(?=[^/])	(?# a "*" not followed by "/")
+		  				|	\r
+		  				|	(?R)		(?# recursive match to handle nested comments)
+		  			 )*? 
+		  		 \*/)
 		)]]></string>
 	</dict>
 </dict>
