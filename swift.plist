@@ -110,7 +110,7 @@
 	<key>Language Features</key>
 	<dict>
 		<key>Identifier and Keyword Character Class</key>
-		<string>0-9A-Za-z_¨ª­¯²-µ·-º¼-¾À-ÖØ-öø-ÿĀ-˿Ͱ-ᙿᚁ-᠍᠏-ᶿḀ-῿​-‍‪-‮‿-⁀⁔⁠-⁯⁰-⃏℀-↏①-⓿❶-➓Ⰰ-ⷿ⺀-⿿〄-〇〡-〯〱-〿぀-퟿豈-ﴽ﵀-﷏ﷰ-︟︰-﹄﹇-�̀-ͯ᷀-᷿⃐-⃿︠-︯</string>
+		<string>A-Za-z_0-9</string>
 		<key>Comment Pattern</key>
 		<string><![CDATA[(?x:
 			(?>  //  [^\r]*              \r)    (?# single line comment)
@@ -132,7 +132,32 @@
 				"
 			)
 		)]]></string>
-
+		<key>Function Pattern</key>
+		<string><![CDATA[(?x:
+			(?>
+				(?P<function>
+					^[[:blank:]]*
+					(func|class|enum|struct|protocol|extension) \s+
+					(?P<function_name>
+						[A-Za-z_][A-Za-z_0-9]*
+					)
+					[^{]*
+					(?P<block>							(?# body)
+						{									(?# literal lbrace)
+							(?>
+								(?> [^{}]+ )
+							  | (?P>block)					(?# recursion!)
+							)*
+						}									(?# literal rbrace)
+					)
+				)
+			)
+		)]]></string>
+		<key>Skip Pattern</key>
+		<string><![CDATA[(?x:
+			(?P>string) |
+			(?P>comment)
+		)]]></string>
 	</dict>
 </dict>
 </plist>
