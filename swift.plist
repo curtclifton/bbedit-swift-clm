@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMLanguageCode</key>
+	<string>Swft</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Swift</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMKeywordList</key>
+	<array><!-- keywords -->
+		<!-- declarations -->
+		<string>class</string>
+		<string>deinit</string>
+		<string>enum</string>
+		<string>extension</string>
+		<string>func</string>
+		<string>import</string>
+		<string>init</string>
+		<string>let</string>
+		<string>protocol</string>
+		<string>static</string>
+		<string>struct</string>
+		<string>subscript</string>
+		<string>typealias</string>
+		<string>var</string>
+		<!-- statements -->
+		<string>break</string>
+		<string>case</string>
+		<string>continue</string>
+		<string>default</string>
+		<string>do</string>
+		<string>else</string>
+		<string>fallthrough</string>
+		<string>if</string>
+		<string>in</string>
+		<string>for</string>
+		<string>return</string>
+		<string>switch</string>
+		<string>where</string>
+		<string>while</string>
+		<!-- expressions and types -->
+		<string>as</string>
+		<string>dynamicType</string>
+		<string>is</string>
+		<string>new</string>
+		<string>super</string>
+		<string>self</string>
+		<string>Self</string>
+		<string>Type</string>
+		<string>__COLUMN__</string>
+		<string>__FILE__</string>
+		<string>__FUNCTION__</string>
+		<string>__LINE__</string>
+		<!-- context sensitive "keywords" -->
+		<string>associativity</string>
+		<string>didSet</string>
+		<string>get</string>
+		<string>infix</string>
+		<string>inout</string>
+		<string>left</string>
+		<string>mutating</string>
+		<string>none</string>
+		<string>nonmutating</string>
+		<string>operator</string>
+		<string>override</string>
+		<string>postfix</string>
+		<string>precedence</string>
+		<string>prefix</string>
+		<string>right</string>
+		<string>set</string>
+		<string>unowned</string>
+		<string>unowned(safe)</string>
+		<string>unowned(unsafe)</string>
+		<string>weak</string>
+		<string>willSet</string>
+	</array>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<!-- standard library -->
+		<string>Bool</string>
+		<!-- TODO, extract terms from Swift.h -->
+	</array>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.swift</string>
+		</dict>
+	</array>
+	<key>BBLMPreferredFilenameExtension</key>
+	<string>swift</string>
+	<key>BBLMSupportsTextCompletion</key>
+	<true/>
+	<key>BBLMCanSpellCheckCodeRuns</key>
+	<false/>
+	<key>BBLMCommentLineDefault</key>
+	<string>//</string>
+	<key>BBLMCommentPrefixDefault</key>
+	<string>/*</string>
+	<key>BBLMCommentSuffixDefault</key>
+	<string>*/</string>
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string>0-9A-Za-z_¨ª­¯²-µ·-º¼-¾À-ÖØ-öø-ÿĀ-˿Ͱ-ᙿᚁ-᠍᠏-ᶿḀ-῿​-‍‪-‮‿-⁀⁔⁠-⁯⁰-⃏℀-↏①-⓿❶-➓Ⰰ-ⷿ⺀-⿿〄-〇〡-〯〱-〿぀-퟿豈-ﴽ﵀-﷏ﷰ-︟︰-﹄﹇-�̀-ͯ᷀-᷿⃐-⃿︠-︯</string>
+	</dict>
+</dict>
+</plist>
