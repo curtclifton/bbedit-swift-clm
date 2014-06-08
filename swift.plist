@@ -86,8 +86,6 @@
 		<string>Bool</string>
 		<!-- TODO, extract terms from Swift.h -->
 	</array>
-	<key>BBLMScansFunctions</key>
-	<true/>
 	<key>BBLMSuffixMap</key>
 	<array>
 		<dict>
@@ -107,10 +105,17 @@
 	<string>/*</string>
 	<key>BBLMCommentSuffixDefault</key>
 	<string>*/</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
 	<key>Language Features</key>
 	<dict>
 		<key>Identifier and Keyword Character Class</key>
 		<string>0-9A-Za-z_¨ª­¯²-µ·-º¼-¾À-ÖØ-öø-ÿĀ-˿Ͱ-ᙿᚁ-᠍᠏-ᶿḀ-῿​-‍‪-‮‿-⁀⁔⁠-⁯⁰-⃏℀-↏①-⓿❶-➓Ⰰ-ⷿ⺀-⿿〄-〇〡-〯〱-〿぀-퟿豈-ﴽ﵀-﷏ﷰ-︟︰-﹄﹇-�̀-ͯ᷀-᷿⃐-⃿︠-︯</string>
+		<key>Comment Pattern</key>
+		<string><![CDATA[(?x:
+			(?>  //  [^\r]*    \r)    (?# single line comment)
+		  | (?>  /\* (.|\r)*?  \*/)   (?# multiline comment)
+		)]]></string>
 	</dict>
 </dict>
 </plist>

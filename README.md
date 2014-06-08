@@ -2,7 +2,7 @@
 
 ## Status
 
-This is a first draft. Keyword highlighting is all that works at the moment.
+I’m actively updating this at the moment. Keyword and commenting highlighting is all that works at the moment.
 
 ## Installation
 
@@ -13,5 +13,4 @@ Now files with the extension “swift” should be syntax highlighted. <!-- The 
 
 ## Known Issues
 
-- No comment highlighting or even detection, so keywords in comments are incorrectly highlighted
 - No function indexing
