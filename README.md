@@ -10,3 +10,8 @@ This is a first draft. Keyword highlighting is all that works at the moment.
 2. Quit and relaunch BBEdit.
 
 Now files with the extension “swift” should be syntax highlighted. <!-- The function popup menu in the navigation bar should also list all the declarations in the current file. -->
+
+## Known Issues
+
+- No comment highlighting or even detection, so keywords in comments are incorrectly highlighted
+- No function indexing
