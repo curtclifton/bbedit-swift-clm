@@ -136,7 +136,7 @@
 		<string><![CDATA[(?x:
 			(?>
 				(?P<function>
-					^[[:blank:]]*
+					(^|\s)
 					(func|class|enum|struct|protocol|extension) \s+
 					(?P<function_name>
 						[A-Za-z_][A-Za-z_0-9]*
