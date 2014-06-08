@@ -137,18 +137,23 @@
 			(?>
 				(?P<function>
 					(^|\s)
-					(func|class|enum|struct|protocol|extension) \s+
+					(func|class|enum|struct|protocol|extension|typealias) (?# we have to match all the names in one go to bind function_name, so we have to match the name and then all possible following stuff separately)
+					\s+
 					(?P<function_name>
 						[A-Za-z_][A-Za-z_0-9]*
 					)
-					[^{]*
-					(?P<block>							(?# body)
-						{									(?# literal lbrace)
-							(?>
-								(?> [^{}]+ )
-							  | (?P>block)					(?# recursion!)
-							)*
-						}									(?# literal rbrace)
+					(
+						\s* = \s* .*	(?# typealias existing type)
+					|
+						[^{]*
+						(?P<block>							(?# body)
+							{									(?# literal lbrace)
+								(?>
+									(?> [^{}]+ )
+								  | (?P>block)					(?# recursion!)
+								)*
+							}									(?# literal rbrace)
+						)
 					)
 				)
 			)
