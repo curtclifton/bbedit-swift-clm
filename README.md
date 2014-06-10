@@ -14,6 +14,6 @@ Now files with the extension “swift” should be syntax highlighted. The funct
 ## Known Issues
 
 - Extensions are only indexed by base type. This means that multiple extensions of the same base type have the same identifier in the function popup menu.
-- Identifier matching does not include the full unicode ranges allowed by the Swift language reference. Only upper and lower case A-Z, 0-9, and '_' are matched. I'm sorry for the lack of diacritic and emoji support.
-- Because of limitations in the matching power of codeless language modules, nested declarations are net indexed and are not fold-able.
+- Identifier matching does not include the full unicode ranges allowed by the Swift language reference. Only upper and lower case A-Z, 0-9, and ‘_’ are matched. I’m sorry for the lack of diacritic and emoji support, but I haven’t yet sorted out how to convince BBEdit to handle them in *Identifier and Keyword Character Class*.
+- Because of limitations in the matching power of codeless language modules, nested declarations are not indexed and are not fold-able.
 
