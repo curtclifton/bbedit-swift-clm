@@ -29,6 +29,9 @@
 		<string>subscript</string>
 		<string>typealias</string>
 		<string>var</string>
+		<string>private</string>
+		<string>internal</string>
+		<string>public</string>
 		<!-- statements -->
 		<string>break</string>
 		<string>case</string>
