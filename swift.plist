@@ -371,9 +371,10 @@
 		<key>Number Pattern</key>
 		<string><![CDATA[(?x:
 			(?>
-			  \b(	(?P<dec>\d[\d_]*)(\.(?P>dec)([eE][-+]?(?P>dec))?)?	(?# decimal/floating point literal)
+			  \b(	(?P<dec>\d[\d_]*)(\.(?P>dec)([eE][-+]?(?P>dec))?)?				(?# decimal/floating point literal)
 				|	0x(?P<hex>[\da-fA-F][\da-fA-F_]*)(\.(?P>hex)[pP][-+]?(?P>dec))?	(?# hexadecimal/floating point literal)
-				|	0b[01][01_]*	|	0o[0-7][0-7_]*					(?# binary, octal literals)
+				|	0b[01][01_]*	|	0o[0-7][0-7_]*								(?# binary, octal literals)
+				|	true|false|nil													(?# boolean, nil literals)
 				)\b
 			)
 		)]]></string>
