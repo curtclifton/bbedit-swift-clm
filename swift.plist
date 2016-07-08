@@ -368,6 +368,15 @@
 				"
 			)
 		)]]></string>
+		<key>Number Pattern</key>
+		<string><![CDATA[(?x:
+			(?>
+			  \b(	(?P<dec>\d[\d_]*)(\.(?P>dec)([eE][-+]?(?P>dec))?)?	(?# decimal/floating point literal)
+				|	0x(?P<hex>[\da-fA-F][\da-fA-F_]*)(\.(?P>hex)[pP][-+]?(?P>dec))?	(?# hexadecimal/floating point literal)
+				|	0b[01][01_]*	|	0o[0-7][0-7_]*					(?# binary, octal literals)
+				)\b
+			)
+		)]]></string>
 		<key>Function Pattern</key>
 		<string><![CDATA[(?x:
 			(?>
@@ -397,6 +406,7 @@
 		<key>Skip Pattern</key>
 		<string><![CDATA[(?x:
 			(?P>string) |
+			(?P>number) |
 			(?P>comment)
 		)]]></string>
 	</dict>
